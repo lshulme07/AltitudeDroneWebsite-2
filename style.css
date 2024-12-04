@@ -117,44 +117,47 @@ html, body {
     position: relative;
     width: 100%;
     height: 100vh; /* Full viewport height */
-    background: url('your-image.jpg') no-repeat center center/cover; /* Replace with your image */
+    background: url('images/hero.jpg') no-repeat center center/cover; /* Correct path to image */
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
-    overflow: hidden;
+    color: white;
+    overflow: hidden; /* Prevents unwanted overflow */
 }
 
-/* Tint overlay */
+/* Tint Overlay */
 .hero-overlay {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 77, 64, 0.7); /* Deep green tint with 70% opacity */
+    background: rgba(0, 0, 0, 0.5); /* Black tint with 50% opacity */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     color: white;
-    padding: 20px;
-    box-sizing: border-box;
+    z-index: 1; /* Ensure the overlay stays above the background image */
 }
 
 .hero-overlay h1 {
-    font-size: 7rem;
+    font-size: 5rem; /* Adjust size as needed */
     font-weight: bold;
     color: #fbc02d; /* Gold for contrast */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* Make text more readable */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* Subtle shadow for readability */
     margin-bottom: 20px;
+    z-index: 2; /* Ensure the text is above the overlay */
 }
 
 .hero-overlay p {
-    font-size: 2.25rem;
+    font-size: 2rem; /* Adjust size as needed */
     color: #e0e0e0; /* Light grey subtitle */
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6); /* Subtle shadow for readability */
+    z-index: 2; /* Ensure the text is above the overlay */
 }
+
 
 /* Packages Section */
 .packages {
